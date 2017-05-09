@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+		arr=[1,2,3,4,2,3,4,1,6,5];
+		//第一种去重方法
+		function arr1(str){
+			var arr2=[];
+				for(var i=0;i<str.length;i++){
+					if(arr2.indexOf(str[i])==-1){
+						arr2.push(str[i])
+					}
+				}
+			return arr2
+		}
+		console.log(arr1(arr))
+		//第二种去重方法
+		function arr3(str){
+			str.sort();
+			re=[str[0]];
+			for(var i=0;i<str.length;i++){
+				if(str[i]!==re[re.length-1]){
+					re.push(str[i])
+				}
+			}
+			return re
+		}
+		console.log(arr3(arr))
+		
+	</script>
+
+</body>
+</html>
